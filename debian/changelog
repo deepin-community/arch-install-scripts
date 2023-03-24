@@ -1,5 +1,119 @@
-template-repository (1.0-1) unstable; urgency=medium
+arch-install-scripts (28-1) unstable; urgency=medium
 
-  * Initial release
+  * New upstream version 28.
+    - Refresh patch.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Unit 193 <unit193@debian.org>  Tue, 22 Nov 2022 04:42:47 -0500
+
+arch-install-scripts (27-1) unstable; urgency=medium
+
+  * New upstream version 27.
+
+ -- Unit 193 <unit193@debian.org>  Wed, 28 Sep 2022 23:14:14 -0400
+
+arch-install-scripts (26-1) unstable; urgency=medium
+
+  * New upstream version 26.
+  * d/control: Suggest pacman-package-manager and update description.
+  * d/rules:
+    - Drop removal of pacstrap, pacman is now in Debian. (Closes: #1016714)
+
+ -- Unit 193 <unit193@debian.org>  Fri, 05 Aug 2022 18:08:20 -0400
+
+arch-install-scripts (25-1) unstable; urgency=medium
+
+  * d/watch: Update, GitHub no longer includes tags on releases page.
+  * New upstream version 25.
+  * d/copyright: Update years.
+  * Update Standards-Version to 4.6.1.
+
+ -- Unit 193 <unit193@debian.org>  Tue, 05 Jul 2022 01:35:20 -0400
+
+arch-install-scripts (24-1) unstable; urgency=medium
+
+  * d/control, d/copyright, d/watch: Update project URLs.
+  * New upstream version 24.
+  * d/copyright: Update years.
+
+ -- Unit 193 <unit193@debian.org>  Wed, 11 Aug 2021 18:43:17 -0400
+
+arch-install-scripts (23-3) unstable; urgency=medium
+
+  * d/install, d/p/policy.d_no_autostart.patch, d/policy-rc.d:
+    - Drop setting up policy-rc.d.
+  * d/control: Update description, thanks MTecknology. (Closes: #978439)
+
+ -- Unit 193 <unit193@debian.org>  Wed, 06 Jan 2021 20:46:36 -0500
+
+arch-install-scripts (23-2) unstable; urgency=medium
+
+  * d/control, d/copyright, d/patches/*: Update my email address.
+  * d/control:
+    - Bump DH compat to 13.
+    - Set arch-install-scripts Multi-Arch: foreign.
+  * d/p/policy.d_no_autostart.patch, d/install, d/policy-rc.d:
+    - Re-write how we set up policy-rc.d, using bind mounts.
+  * d/watch: Bump to version 4.
+  * Update Standards-Version to 4.5.1.
+
+ -- Unit 193 <unit193@debian.org>  Sat, 19 Dec 2020 20:53:35 -0500
+
+arch-install-scripts (23-1) unstable; urgency=medium
+
+  * d/watch: Allow zst, bz2, and gz compressed tarballs.
+  * New upstream version 23
+  * d/u/signing-key.asc: Drop, no longer useful.
+  * d/copyright: Add Eli Schwartz.
+  * d/control:
+    - R³: no.
+    - Add Vcs-* fields.
+  * Update Standards-Version to 4.4.1.
+
+ -- Unit 193 <unit193@ubuntu.com>  Fri, 15 Nov 2019 19:33:46 -0500
+
+arch-install-scripts (22-1) unstable; urgency=medium
+
+  * New upstream version 22
+  * d*.adoc, d/manpages, d/rules: Drop our manpages in favor of upstream's.
+  * d/rules: Clean up pacstrap's manpage and bash-completion too.
+  * d/control:
+    - Update Build-Depend: asciidoctor → asciidoc-base, docbook-xsl, xsltproc.
+
+ -- Unit 193 <unit193@ubuntu.com>  Wed, 03 Jul 2019 05:10:54 -0400
+
+arch-install-scripts (21-1) unstable; urgency=medium
+
+  * New upstream version 21
+    - Refresh patch.
+  * d/copyright: Update years.
+  * Update Standards-Version to 4.3.0.
+  * d/compat, d/control:
+    - Drop d/compat in favor of debhelper-compat, bump to 12.
+
+ -- Unit 193 <unit193@ubuntu.com>  Fri, 11 Jan 2019 00:43:01 -0500
+
+arch-install-scripts (20-1) unstable; urgency=medium
+
+  * New upstream version 20
+    - Refresh patches.
+  * d/arch-chroot.adoc, d/genfstab.adoc:
+    - Update manpages from updated help text.
+  * d/compat, d/control: Bump dh compat to 11.
+
+ -- Unit 193 <unit193@ubuntu.com>  Tue, 23 Oct 2018 20:28:22 -0400
+
+arch-install-scripts (19-1) unstable; urgency=medium
+
+  * d/watch: Update location of tarballs, no longer includes *.sig.
+  * New upstream version 19
+  * d/arch-chroot.adoc, d/control, d/genfstab.adoc, d/manpages, d/rules:
+    - Write manpages for the scripts, use asciidoctor to generate final output.
+  * Update Standards-Version to 4.2.1.
+
+ -- Unit 193 <unit193@ubuntu.com>  Tue, 28 Aug 2018 19:55:42 -0400
+
+arch-install-scripts (18-1) unstable; urgency=medium
+
+  * Initial release.
+
+ -- Unit 193 <unit193@ubuntu.com>  Tue, 20 Mar 2018 22:39:36 -0400
