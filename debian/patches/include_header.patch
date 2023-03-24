@@ -1,0 +1,27 @@
+Description: Include some information in the header of fstab
+Author: Unit 193 <unit193@debian.org>
+Forwarded: not-needed
+Last-Update: 2018-01-28
+
+---
+ genfstab.in |    9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+--- a/genfstab.in	2022-11-22 04:41:45.103647854 -0500
++++ b/genfstab.in	2022-11-22 04:41:45.079647965 -0500
+@@ -146,6 +146,15 @@
+ fi
+ 
+ # handle block devices
++cat <<EOF
++# /etc/fstab: static file system information.
++#
++# Use 'blkid' to print the universally unique identifier for a
++# device; this may be used with UUID= as a more robust way to name devices
++# that works even if disks are added and removed. See fstab(5).
++#
++EOF
++printf "%-15s %-15s %-7s %-15s %-7s %s\n" '# <file system>' '<mount point>' '<type>' '<options>' '<dump>' '<pass>'
+ findmnt -Recvruno SOURCE,TARGET,FSTYPE,OPTIONS,FSROOT "$root" |
+     while read -r src target fstype opts fsroot; do
+   if (( !pseudofs )) && fstype_is_pseudofs "$fstype"; then
